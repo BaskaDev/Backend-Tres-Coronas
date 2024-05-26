@@ -1,0 +1,74 @@
+<div class="image-container">
+    <img src="assets/img-bar.jpg" alt="Imagen de Bar" class="img-bar">
+    <div class="overlay">
+      <h1 class="overlay-text">MULTIPLES SEDES </h1>
+      <div class="underlay-text">
+        <h2>!J*DER ESTE BAR SI ES DE GANGSTERS!</h2>
+        <h3>-VISITA LA SEDE DE TU GRUPO CRIMINAL-</h3>
+      </div>
+  
+    </div>
+  </div>
+  
+  <div class="image-cont">
+    <img src="assets/gagnser.png" alt="Imagen de Bar" >
+  </div>
+  
+  <div class="options-div bg-dark mb-5">
+  
+    <h3 class="title">Que desea hacer?</h3>
+  
+    <button type="button" class="lista"routerLink="/newBar" >
+      <span class="button__text"  >Abrir Bar</span>
+      <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+    </button>
+  
+    <button type="button" class="lista">
+      <span class="button__text">Dejar comentarios</span>
+     
+    </button>
+  </div>
+ 
+
+
+
+
+    <div class="options-div bg-dark mb-5">
+ 
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Localidad</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (bar of bares; track bar.idBar) {
+                    <tr >   
+                        <th>{{bar.nameBar}}</th>
+                        <th>{{bar.addressBar}}</th>
+                        <th>{{bar.locallyBar}}</th>
+                        <th class="text-end">
+                          <div class="btn-group"> 
+                            <button class="btn btn-primary" style ="margin-right: 20px;" [routerLink]="['perfil', bar.idBar]" >
+                              Ingresar
+                              </button>
+                             <button class="btn btn-primary" style ="margin-right: 20px;" [routerLink]="['edit',bar.idBar]" >
+                             Editar
+                             </button>
+                             <button class="btn btn-danger" (click)="deleteBar(bar)">
+                                Eliminar
+                             </button>
+
+                          </div>
+                            
+                    </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+

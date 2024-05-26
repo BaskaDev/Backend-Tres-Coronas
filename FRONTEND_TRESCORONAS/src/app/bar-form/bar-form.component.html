@@ -1,0 +1,41 @@
+<h2 class="mb-5 header-title" style="color: aliceblue;">
+ <span>
+          @if(bar){
+              TRES CORONAS EDITAR BAR {{bar.nameBar}}
+          }@else {
+              TRES CORONAS CREACION DE BAR
+          }
+      </span>
+
+</h2>
+
+<div class="row row-cols-3 justify-content-center">
+  @if (form) {
+      <form class="form" [formGroup]="form" (ngSubmit)="save()">
+        <div class="title-container">
+          <img src="assets/logo.png" class="header-logo"/>
+       
+          <span class="title">TRES CORONAS</span>
+        </div>
+          <label for="nameBar" class="label">Nombre</label>
+          <input id="nameBar" type="text" placeholder="Nombre del Bar" class="form-control" formControlName="nameBar">
+
+          <label for="addressBar">Dirección</label>
+          <input id="addressBar" type="text" placeholder="Dirección del bar" class="form-control" formControlName="addressBar">
+
+          <label for="locallyBar">Localidad</label>
+          <input id="locallyBar" type="text" placeholder="Localidad" class="form-control" formControlName="locallyBar">
+
+          <button type="submit" class="submit" style="margin-top: 20px;">
+              @if(bar){
+                  Actualizar
+              }@else {
+                  Registrar
+              }
+          </button>
+          <button type="button" class="submit" style="margin-top: 20px;" routerLink="/">Volver</button>
+      </form>
+  }
+</div>
+
+

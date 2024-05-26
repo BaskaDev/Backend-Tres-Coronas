@@ -1,0 +1,126 @@
+
+@if(siteGang){
+  <div class="card shadow">
+    <h2 class="title-principal">PANDILLA   </h2>
+    <h2 class="title-principal"> {{siteGang?.nameGang?.toUpperCase()}}</h2>
+    <p class="title-principal-1">INTEGRANTES: {{siteGang?.numberMembersGang}}</p>
+    <img src="assets/messi.png" class="header-logo-principal" />
+    <button class="bonito" [routerLink]="['/newClient', siteGang.idGang]" >AGREGAR CLIENTE</button>  
+  </div>
+}@else {
+  <div class="card shadow">
+    <h2 class="title-principal">PANDILLA   </h2>
+    <h2 class="title-principal"> SIN ASIGNAR</h2>
+    <p class="title-principal-1">INTEGRANTES:0</p>
+    <img src="assets/messi.png" class="header-logo-principal" />
+    <button class="bonito" >AGREGAR CLIENTE</button>  
+  </div>
+}
+
+
+  <div class="card-prod shadow">
+    <h2 class="title-principal">PRODUCTOS</h2>
+    <p class="title-principal-1">PROVEEDOR: HELIO FERNEY</p>
+    <p class="title-principal-1">RANGO: POLICIA CORRUPTO</p>
+    <img src="assets/helio-ferney.png" class="prod-logo" />
+    <button class="bonito" [routerLink]="['/newProduct']" >HACER PEDIDO A HELIO</button>  
+  </div>
+
+
+  <div class="card-seg shadow">
+    <h2 class="title-principal">SEGURIDAD</h2>
+    <p class="title-principal-1">PROVEEDOR: SANGRE MORADA</p>
+    <p class="title-principal-1">RANGO: JEFE PARAMILITAR</p>
+    <img src="assets/sangre-morada.png" class="seg-logo" />
+    <button class="bonito" [routerLink]="['/newHokage', idSite]" >HACER PEDIDO A SANGRE MORADA</button>  
+  </div>
+
+  <div class="products-div bg-dark mb-5">
+ 
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          @for (product of siteProducts; track product.id_product) {
+            <tr>
+                <th>{{product.name_product}}</th>
+                <th class="text-end" >
+                  <button>
+                    Dar en descuento
+                 </button>
+                </th>
+            </tr>
+          }
+        </tbody>
+      
+    </table>
+  
+  </div>
+
+
+
+
+  <div id="options"class="options-div bg-dark mb-5">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Posicion</th>
+                <th>Fecha de contratacion</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (employee of siteEmployees; track employee) {
+              <tr>
+                <th>{{employee.nameEmployee}}</th>
+                <th>{{employee.positionEmployee}}</th>
+                <th>{{employee.hiringDateEmployee}}</th>
+                <th class="text-end" (click)="deleteEmploye(employee)">
+                  <button>
+                    Despedir
+                 </button>
+                </th>
+              
+              </tr>
+            }
+        </tbody>
+    </table>
+
+  </div>
+
+
+  <div class="gangs-div bg-dark mb-5">
+ 
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre Cliente</th>
+                <th>Status</th>
+   
+            </tr>
+        </thead>
+        <tbody>
+          @for (client of siteClients; track client.id_client) {    
+            <tr>
+              <th>
+                {{client.name_client}}
+              </th>
+              <th>
+                {{client.user_client}}
+              </th>
+            </tr>
+            
+         
+  }
+</tbody>
+</table>
+  </div>
+
+

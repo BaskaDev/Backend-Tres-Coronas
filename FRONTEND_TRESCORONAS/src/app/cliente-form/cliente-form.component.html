@@ -1,0 +1,81 @@
+<div class="card shadow">
+    <h2 class="title-principal">PANDILLA   </h2>
+    <h2 class="title-principal"> {{siteGang?.nameGang?.toUpperCase()}}</h2>
+    <p class="title-principal-1">INTEGRANTES: {{siteGang?.numberMembersGang}}</p>
+    <img src="assets/messi.png" class="header-logo-principal" />
+  </div>
+
+@if(form){
+
+    <form class="form" [formGroup]="form" (ngSubmit)="save()">
+      <div class="title-container">
+        <img src="assets/logo.png" class="header-logo" />
+        <span class="title">TRES CORONAS</span>
+      </div>
+  
+      <label for="nameClient" class="label">Nombre Cliente</label>
+      <input
+        id="nameClient"
+        type="text"
+        placeholder="Nombre"
+        class="form-control"
+        formControlName="nameClient"
+      />
+
+      <label for="userClient" class="label">Username Cliente</label>
+      <input
+        id="userClient"
+        type="text"
+        placeholder="Username"
+        class="form-control"
+        formControlName="userClient"
+      />
+
+
+      <label for="passClient" class="label">Password Cliente</label>
+      <input
+        id="passClient"
+        type="text"
+        placeholder="Username"
+        class="form-control"
+        formControlName="passClient"
+      />
+  
+      <label for="killsClient" class="label">Bajas a policias</label>
+      <select
+          id="killsClient"
+          class="form-control"
+          formControlName="killsClient"
+        >
+          <option value="" disabled selected>Seleccione su racha</option>
+          <option value="First Blood">First Blood</option>
+          <option value="Double">Double Kill</option>
+          <option value="Triple">Triple Kill</option>
+          <option value="Quadra">Quadra Kill</option>
+          <option value="Penta">Penta Kill</option>
+          <option value="Legendary">Legendary Kill</option>
+          <option value="Mata-siete">MATA-SIETE </option>
+        </select>
+
+      <label for="timesClient" class="label">Veces en prision</label>
+      <select
+        id="timesClient"
+        class="form-control"
+        formControlName="timesClient"
+      >
+
+      <option value="" disabled selected>Seleccione su racha</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="Fast Pass">Fast Pass</option>
+    </select>
+  
+  
+  
+       
+  
+      <button type="submit" class="submit" style="margin-top: 20px;" >Registrar</button>
+      <button type="button" class="submit" style="margin-top: 20px;" routerLink="/">Volver</button>
+    </form>
+}

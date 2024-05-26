@@ -1,0 +1,39 @@
+<div class="card-seg shadow">
+    <h2 class="title-principal">SEGURIDAD</h2>
+    <p class="title-principal-1">PROVEEDOR: SANGRE MORADA</p>
+    <p class="title-principal-1">RANGO: JEFE PARAMILITAR</p>
+    <img src="assets/sangre-morada.png" class="seg-logo" />
+  </div>
+
+@if(form){
+
+  <form class="form" [formGroup]="form" (ngSubmit)="save()">
+    <div class="title-container">
+      <img src="assets/logo.png" class="header-logo" />
+      <span class="title">TRES CORONAS</span>
+    </div>
+
+    <label for="nameEmployee" class="label">Nombre Empleado</label>
+    <input
+      id="nameEmployee"
+      type="text"
+      placeholder="Nombre"
+      class="form-control"
+      formControlName="nameEmployee"
+    />
+
+    <label for="positionEmployee" class="label">Posición Empleado</label>
+    <select
+      id="positionEmployee"
+      class="form-control"
+      formControlName="positionEmployee"
+    >
+      <option value="" disabled selected>Seleccione una posición</option>
+      <option value="Hokage">Hokage</option>
+
+    </select>
+
+    <button type="submit" class="submit" style="margin-top: 20px;" >Registrar</button>
+    <button type="button" class="submit" style="margin-top: 20px;" routerLink="/">Volver</button>
+  </form>
+}

@@ -1,0 +1,197 @@
+.card {
+    margin-left: 18%;
+    align-content: left;
+    margin-top: 2%;
+    width: 900px;
+    height: 354px;
+    background:#042f1d;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   }
+
+ 
+   
+   .card-prod {
+
+    position: relative;
+    top:25px;
+    align-content: left;
+    margin-top: 2%;
+    margin-left:-16%;
+    width: 800px;
+    height: 354px;
+    background:#042f1d;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   }
+
+   .card-seg {
+
+    position: relative;
+    top:-350px;
+    align-content: left;
+    margin-top: 2%;
+    margin-left:56%;
+    width: 800px;
+    height: 354px;
+    background:#042f1d;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   }
+
+
+
+
+   .title-principal{
+    position: relative;
+    text-align: left;
+    margin-left: 20px;
+    top:80px;
+    color: #f0fdf6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+}
+
+.title-principal-1{
+    position: relative;
+    text-align: left;
+    margin-left: 20px;
+    top:80px;
+    color: #f0fdf6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+}
+.header-logo-principal{
+    position: relative;
+    top:-150px;
+    height: 320px;
+    width: 280px; /* Ajusta la altura de la imagen según sea necesario */
+    margin-left: 550px; /* Espacio entre la imagen y el texto */
+}
+
+.header-logo{
+    position: relative;
+    top:-80px;
+    height: 320px;
+    width: 280px; /* Ajusta la altura de la imagen según sea necesario */
+    margin-left: 350px; /* Espacio entre la imagen y el texto */
+}
+
+
+.prod-logo{
+    position: relative;
+    top:-150px;
+    height: 320px;
+    width: 280px; /* Ajusta la altura de la imagen según sea necesario */
+    margin-left: 380px; /* Espacio entre la imagen y el texto */
+}
+
+.seg-logo{
+    position: relative;
+    top:-220px;
+    height: 420px;
+    width: 310px; /* Ajusta la altura de la imagen según sea necesario */
+    margin-left: 450px; /* Espacio entre la imagen y el texto */
+}
+
+
+.bonito {
+    padding: 0.8em 1.8em;
+    border: 2px solid #1dca78;
+    top:250px;
+    left: 100px;
+    position: absolute;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #1dca78;
+   }
+   
+   .bonito::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #1dca78;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .bonito:hover::before {
+    width: 105%;
+   }
+   
+   .bonito:hover {
+    color: #111;
+   }
+   
+   .options-div{
+    position: relative;
+    margin-left: 68%;
+    top:-335px;
+    width: 600px;
+   }
+
+
+   .gangs-div{
+        position: relative;
+        margin-left: 15%;
+        top:-505px;
+        width: 600px;
+       
+   }
+
+   .products-div{
+    position: relative;
+    align-items: left;
+    margin-left: -5%;
+    top:-100px;
+    width: 200px;
+   
+}
+
+button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #157045;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #157045;
+   }
+   
+   button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #157045;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   button:hover::before {
+    width: 105%;
+   }
+   
+   button:hover {
+    color: white;
+   }

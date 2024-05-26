@@ -1,0 +1,62 @@
+<div class="card shadow">
+    <h2 class="title">
+        BAR {{bar?.nameBar?.toUpperCase()}}
+    </h2>
+    <
+        <button class="bonito"(click)="addSite()"> NUEVA SEDE
+        </button>  
+        <img src="assets/doge.png" class="header-logo"/>
+</div>
+
+
+<div class="card shadow">
+  <h2 class="title">AGREGAR EMPLEADO</h2>
+  <button class="bonito" [routerLink]="['/newEmployee', bar!.idBar]">NUEVO EMPLEADO</button>  
+  <img src="assets/frailejon.png" class="header-logo-jefe"/>
+</div>
+
+
+
+<div class="card shadow">
+    <h2 class="title">
+        ASIGNAR PANDILLA
+    </h2>
+    <
+        <button class="bonito" [routerLink]="['/newGang', bar!.idBar]"> AGREGAR PANDILLA
+        </button>  
+        <img src="assets/messi.png" class="header-logo-pandilla"/>
+</div>
+
+
+<div class="options-div">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th class="table">Id Site</th>
+          <th class="table">Localidad</th>
+          <th class="table"></th>
+        
+ 
+        </tr>
+      </thead>
+      <tbody class="table">
+        @for (site of sites; track site.idSite) {
+          
+              <tr>
+                <td>{{ site.idSite }}</td>
+                <td>{{bar?.locallyBar}}</td> 
+             
+                <td class=" text-end">
+                    <button class="btn btn-primary" [routerLink]="['/perfilSite', site.idSite]" >Ingresar</button>
+                  </td>
+
+              </tr>
+
+        }
+      </tbody>
+    </table>
+  </div>
+  
+
+
+

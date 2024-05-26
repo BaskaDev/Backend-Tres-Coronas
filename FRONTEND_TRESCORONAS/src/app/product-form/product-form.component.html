@@ -1,0 +1,30 @@
+<div class="card-prod shadow">
+    <h2 class="title-principal">PRODUCTOS</h2>
+    <p class="title-principal-1">PROVEEDOR: HELIO FERNEY</p>
+    <p class="title-principal-1">RANGO: POLICIA CORRUPTO</p>
+    <img src="assets/helio-ferney.png" class="prod-logo" /> 
+  </div>
+
+
+  <div class="row row-cols-3 justify-content-center">
+   @if(form){
+        <form class="form" [formGroup]="form" (ngSubmit)="save()">
+          <div class="title-container">
+            <img src="assets/logo.png" class="header-logo"/>
+         
+            <span class="title">TRES CORONAS</span>
+          </div>
+            <label for="nameProduct" class="label">Nombre producto</label>
+            <input id="nameProduct" type="text" placeholder="Nombre Producto" class="form-control" formControlName="nameProduct">
+  
+            <label for="countProduct">Cantidad producto</label>
+            <input id="countProduct" type="text" placeholder="Cantidad" class="form-control" formControlName="countProduct">
+  
+          
+            <button type="submit" class="submit" style="margin-top: 20px;">
+                    Registrar
+            </button>
+            <button type="button" class="submit" style="margin-top: 20px;" routerLink="/">Volver</button>
+        </form>
+    }
+  </div>
